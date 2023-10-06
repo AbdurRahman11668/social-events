@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "name": "Engagement Parties",
+      "image": "product1.jpg",
+      "short_description": "A great product for your needs",
+      "price": 19.99
+    },
+    {
+      "id": 2,
+      "name": "Weddings",
+      "image": "product2.jpg",
+      "short_description": "High-quality and durable",
+      "price": 29.99
+    },
+    {
+      "id": 3,
+      "name": "Anniversaries",
+      "image": "product3.jpg",
+      "short_description": "Elegant and stylish design",
+      "price": 24.99
+    },
+    {
+      "id": 4,
+      "name": "Birthday Parties",
+      "image": "product4.jpg",
+      "short_description": "Affordable and reliable",
+      "price": 14.99
+    },
+    {
+      "id": 5,
+      "name": "Retirement Parties",
+      "image": "product5.jpg",
+      "short_description": "Perfect for everyday use",
+      "price": 9.99
+    },
+    {
+      "id": 6,
+      "name": "Baby shower",
+      "image": "product6.jpg",
+      "short_description": "The latest in technology",
+      "price": 49.99
+    },
+    {
+      "id": 7,
+      "name": "Reunions",
+      "image": "product7.jpg",
+      "short_description": "Sleek and modern design",
+      "price": 34.99
+    },
+    {
+      "id": 8,
+      "name": "Art Exhibitions",
+      "image": "product8.jpg",
+      "short_description": "Built to last",
+      "price": 39.99
+    }
+  ]
+  
