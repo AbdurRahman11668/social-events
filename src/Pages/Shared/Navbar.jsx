@@ -23,8 +23,9 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 max-w-6xl mx-auto">
       <div className="navbar-start">
+      <NavLink to='/' className='text-3xl font-semibold'>Social Events</NavLink>
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
