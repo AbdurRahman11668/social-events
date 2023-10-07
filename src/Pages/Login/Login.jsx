@@ -41,6 +41,8 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
+        // ??Navigate after login
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
