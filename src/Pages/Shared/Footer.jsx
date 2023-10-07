@@ -3,7 +3,7 @@ import { FaTwitter, FaYoutube, FaFacebook } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="footer items-center p-4 bg-teal-600 text-white">
+    <footer className="footer px-10 items-center p-4 bg-teal-600 text-white">
       <aside className="items-center grid-flow-col">
         <NavLink to='/' className='text-3xl font-semibold'>Social Events</NavLink>
         <p>Copyright © 2023 - All right reserved</p>

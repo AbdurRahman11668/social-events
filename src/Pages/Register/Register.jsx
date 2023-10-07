@@ -1,36 +1,60 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const [registerError, setRegisterError] = useState("");
+  const [success, setSuccess] = useState("");
 
-    const {createUser} = useContext(AuthContext)
+  const handleRegister = (e) => {
+    e.preventDefault();
+    // console.log(e.currentTarget)
+    const form = new FormData(e.currentTarget);
 
-    const handleRegister = e =>{
-        e.preventDefault();
-        console.log(e.currentTarget)
-        const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(name, email, password)
 
-        const name = form.get('name');
-        const photo = form.get('photo');
-        const email = form.get('email');
-        const password = form.get('password');
-        console.log(name, photo, email, password)
+    setRegisterError("");
+    setSuccess("");
 
-        //Create User
-        createUser(email, password)
-        .then(result =>{
-            console.log(result.user)
-        })
-        .catch(error => {
-            console.log(error)
-        })
+    if (password.length < 6) {
+      setRegisterError("Password must be at least 6 characters or longer");
+      return;
+    } else if (!/([A-Z])([a-z])/.test(password)) {
+      setRegisterError("Password must contain at least one uppercase and lowercase letter");
+      return;
     }
 
-    return (
-        <div className="mb-10">
-            <div className="">
-        <h2 className="text-3xl my-5 text-center font-semibold">Please Register</h2>
+    //Create User
+    createUser(email, password)
+      .then((result) => {
+        console.log(result.user);
+        if (result.user) {
+          // ??Navigate after login
+          // navigate(location?.state ? location.state : "/login");
+          toast("You registered successfully");
+        } else {
+          console.log("please recheck your registration information");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        setRegisterError(error.message);
+      });
+  };
+
+  return (
+    <div className="mb-10">
+      <div className="">
+        <h2 className="text-3xl my-5 text-center font-semibold">
+          Please Register
+        </h2>
         <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/3 mx-auto">
           <div className="form-control mb-5">
             <label className="label">
@@ -40,18 +64,6 @@ const Register = () => {
               type="text"
               name="name"
               placeholder="Your Name"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control mb-5">
-            <label className="label">
-              <span className="label-text">PhotoUrl</span>
-            </label>
-            <input
-              type="text"
-              name="photo"
-              placeholder="Your Photo URL"
               className="input input-bordered"
               required
             />
@@ -86,13 +98,26 @@ const Register = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-teal-600 text-white">Register</button>
+            <button
+              className="btn bg-teal-600 text-white"
+            >
+              Register
+            </button>
           </div>
         </form>
-        <p className="text-center mt-4">Already have an account ? <Link to="/login" className="text-teal-800 font-bold">Login</Link></p>
+        {registerError && (
+          <p className="text-red-700 text-center my-3">{registerError}</p>
+        )}
+        <p className="text-center mt-4">
+          Already have an account ?{" "}
+          <Link to="/login" className="text-teal-800 font-bold">
+            Login
+          </Link>
+        </p>
       </div>
-        </div>
-    );
+        <ToastContainer />
+    </div>
+  );
 };
 
 export default Register;

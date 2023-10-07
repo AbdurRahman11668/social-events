@@ -12,20 +12,20 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className='hover:bg-teal-600 hover:text-white'>Home</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/login" className='hover:bg-teal-600 hover:text-white'>Login</NavLink>
       </li>
       <li>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink to="/register" className='hover:bg-teal-600 hover:text-white'>Register</NavLink>
       </li>
     </>
   );
   return (
     <div className="navbar bg-base-100 max-w-6xl mx-auto">
       <div className="navbar-start">
-      <NavLink to='/' className='text-3xl font-semibold'>Social Events</NavLink>
+      <NavLink to='/' className='text-3xl font-semibold text-teal-600'>Social Events</NavLink>
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -52,7 +52,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+        <ul className="menu menu-horizontal px-1 text-teal-600 font-medium ">{navLinks}</ul>
       </div>
       <div className="navbar-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -66,7 +66,7 @@ const Navbar = () => {
           </button>
         ) : (
           <Link to="/login">
-            <button className="btn">Login</button>
+            <button className="btn text-teal-600 hover:bg-teal-600 hover:text-white">Login</button>
           </Link>
         )}
       </div>
