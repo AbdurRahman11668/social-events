@@ -1,14 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
   import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { createUser, signInWithGoogle } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState("");
-  const [success, setSuccess] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -21,7 +20,6 @@ const Register = () => {
     console.log(name, email, password)
 
     setRegisterError("");
-    setSuccess("");
 
     if (password.length < 6) {
       setRegisterError("Password must be at least 6 characters or longer");
@@ -46,6 +44,16 @@ const Register = () => {
       .catch((error) => {
         console.log(error);
         setRegisterError(error.message);
+      });
+  };
+
+  const handleGoogleRegister = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
       });
   };
 
@@ -114,6 +122,17 @@ const Register = () => {
             Login
           </Link>
         </p>
+        <div className=" md:w-3/4 lg:w-1/3 mx-auto ">
+          <p className="mt-5 mx-auto">
+            <button
+              onClick={handleGoogleRegister}
+              className="btn rounded-3xl w-full bg-blue-500 text-white text-xl"
+            >
+              <FaGoogle className="mr-2 text-blue-500 p-1 bg-white rounded-3xl text-3xl"></FaGoogle>{" "}
+              Google
+            </button>
+          </p>
+        </div>
       </div>
         <ToastContainer />
     </div>

@@ -14,6 +14,8 @@ const Navbar = () => {
       <li>
         <NavLink to="/" className='hover:bg-teal-600 hover:text-white'>Home</NavLink>
       </li>
+      <li><a href="#services" className='hover:bg-teal-600 hover:text-white'>Services</a>
+      </li>
       <li>
         <NavLink to="/login" className='hover:bg-teal-600 hover:text-white'>Login</NavLink>
       </li>
@@ -56,15 +58,14 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img src="https://i.ibb.co/JvQ3s4X/user.png" />
-          </div>
         </label>
-        {user ? (
-          <button onClick={handleSignOut} className="btn">
+        {user ? <>
+            <img src={user.photoURL} className="w-7 mr-2 rounded-full" alt="" />
+            <a>{user.email}</a>
+            <button onClick={handleSignOut} className="btn ml-2">
             Sign Out
           </button>
-        ) : (
+        </> : (
           <Link to="/login">
             <button className="btn text-teal-600 hover:bg-teal-600 hover:text-white">Login</button>
           </Link>
