@@ -2,58 +2,58 @@
     {
       "id": 1,
       "name": "Engagement Parties",
-      "image": "product1.jpg",
-      "short_description": "A great product for your needs",
-      "price": 19.99
+      "image": "https://i.ibb.co/nmffJxk/engagement.png",
+      "short_description": "An engagement party is a social event held to celebrate and announce the engagement of a couple who have recently decided to get married. It's a joyful occasion that brings together friends and family to share in the couple's happiness and offer their congratulations. Engagement parties are typically held in the early stages of wedding planning, soon after the engagement itself.",
+      "price": "$619.99"
     },
     {
       "id": 2,
       "name": "Weddings",
-      "image": "product2.jpg",
-      "short_description": "High-quality and durable",
-      "price": 29.99
+      "image": "https://i.ibb.co/ZcLMpqp/wedding.png",
+      "short_description": "The wedding ceremony is the core of the event. It can take place in a religious institution, such as a church, mosque, or temple, or in a secular setting like a garden, beach, or banquet hall. During the ceremony, the couple exchanges vows and, in many cases, rings. The officiant, who could be a religious leader, justice of the peace, or a chosen friend or family member, presides over the proceedings.",
+      "price": "$729.99"
     },
     {
       "id": 3,
       "name": "Anniversaries",
-      "image": "product3.jpg",
-      "short_description": "Elegant and stylish design",
-      "price": 24.99
+      "image": "https://i.ibb.co/JK6vsgM/anniversary.jpg",
+      "short_description": "It seems like you're looking for information or ideas related to planning an anniversary event. Anniversary events can be a wonderful way to celebrate a milestone in a person's life or a significant event.",
+      "price": "$524.99"
     },
     {
       "id": 4,
       "name": "Birthday Parties",
-      "image": "product4.jpg",
-      "short_description": "Affordable and reliable",
-      "price": 14.99
+      "image": "https://i.ibb.co/8xzB5qp/birthday.jpg",
+      "short_description": "A birthday party is a special occasion where you can celebrate the existence of someone you care about and create lasting memories. Whether you're planning a party for a child, a teenager, an adult, or even a senior, the key to success lies in thoughtful preparation and attention to detail.",
+      "price": "$914.99"
     },
     {
       "id": 5,
       "name": "Retirement Parties",
-      "image": "product5.jpg",
-      "short_description": "Perfect for everyday use",
-      "price": 9.99
+      "image": "https://i.ibb.co/K0PTShJ/retirement.jpg",
+      "short_description": "Certainly! A retirement party is a special occasion to celebrate the end of a long and successful career and to wish the retiree a happy and fulfilling retirement. Planning a memorable retirement party involves careful thought and preparation. ",
+      "price": "$679.99"    
     },
     {
       "id": 6,
       "name": "Baby shower",
-      "image": "product6.jpg",
-      "short_description": "The latest in technology",
-      "price": 49.99
+      "image": "https://i.ibb.co/2KYmvmD/baby-shower.jpg",
+      "short_description": "Essentially, it's a party to welcome the new baby and support the parents with gifts and love. Food is typically served, which can range from a dessert table or light snacks to a more substantial meal. And sometimes, the event includes activities such as games. Baby showers can happen before or after the baby is born.",
+      "price": "$949.99"
     },
     {
       "id": 7,
       "name": "Reunions",
-      "image": "product7.jpg",
-      "short_description": "Sleek and modern design",
-      "price": 34.99
+      "image": "https://i.ibb.co/9G8vHs0/reunion.png",
+      "short_description": "Reunion events provide a unique opportunity to reconnect with family, friends, or former colleagues, reminisce about shared experiences, and create new memories. Whether you're planning a family reunion, a high school reunion, or any other type of gathering.",
+      "price": "$734.99"
     },
     {
       "id": 8,
       "name": "Art Exhibitions",
-      "image": "product8.jpg",
-      "short_description": "Built to last",
-      "price": 39.99
+      "image": "https://i.ibb.co/j6rS3Dc/art-exhibitions.png",
+      "short_description": "Art exhibitions are events where artists showcase their work to the public. These events provide a platform for artists to display their creativity and for art enthusiasts to appreciate and purchase artwork. Art exhibitions can vary in size and scope, from small local shows to major international events.",
+      "price": "$939.99"
     }
   ]
   
