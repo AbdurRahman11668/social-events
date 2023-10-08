@@ -10,6 +10,8 @@ const Cards = () => {
       .then((data) => setCards(data));
   }, []);
 
+
+
   return (
     <div className="w-2/3 md:w-full md:max-w-5xl mx-auto pt-14" id="events">
       <div className="grid justify-center">
@@ -22,7 +24,7 @@ const Cards = () => {
           alt=""
         />
       </div>
-      <div className="grid md:grid-cols-2 gap-10 pb-14 text-center md:text-start">
+      <div className="grid md:grid-cols-2 gap-10 pb-14 text-center md:text-start" data-aos="fade-right">
         {cards.map((card) => (
           <Card key={card.id} card={card}></Card>
         ))}

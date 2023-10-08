@@ -1,10 +1,20 @@
+
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
 const News = () => {
+  useEffect(() => {
+  Aos.init({
+    duration: 1500
+  }); 
+}, [])
   return (
     <div className="my-10 px-10 md:max-w-7xl mx-auto">
       <h2 className="text-6xl font-bold text-center">What's New</h2>
 
       <div className="grid lg:grid-cols-2 gap-10 mt-10">
-        <div>
+        <div data-aos="fade-right">
           <div className="hero cursor-pointer hover:scale-105 hover:duration-700">
             <img
               src="https://i.ibb.co/Qm97KJ1/news-01.jpg"
@@ -28,7 +38,7 @@ const News = () => {
           </h2>
         </div>
 
-        <div>
+        <div data-aos="fade-right">
           <div className="hero cursor-pointer hover:scale-105 hover:duration-700">
             <img
               src="https://i.ibb.co/v1zmP9j/news-02.jpg"
@@ -52,7 +62,7 @@ const News = () => {
           </h2>
         </div>
 
-        <div>
+        <div data-aos="fade-left">
           <div className="hero cursor-pointer hover:scale-105 hover:duration-700">
             <img
               src="https://i.ibb.co/JFRCfks/news-03.jpg"
@@ -76,7 +86,7 @@ const News = () => {
           </h2>
         </div>
 
-        <div>
+        <div data-aos="fade-left">
           <div className="hero cursor-pointer hover:scale-105 hover:duration-700">
             <img
               src="https://i.ibb.co/HT02sjb/news-04.jpg"
@@ -100,7 +110,7 @@ const News = () => {
           </h2>
         </div>
 
-        <div>
+        <div data-aos="fade-right">
           <div className="hero cursor-pointer hover:scale-105 hover:duration-700">
             <img
               src="https://i.ibb.co/q9NJ6HG/news-05.jpg"
@@ -124,7 +134,7 @@ const News = () => {
           </h2>
         </div>
 
-        <div>
+        <div data-aos="fade-right">
           <div className="hero cursor-pointer hover:scale-105 hover:duration-700">
             <img
               src="https://i.ibb.co/KXpQy4y/news-06.jpg"

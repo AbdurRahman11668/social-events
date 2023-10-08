@@ -1,4 +1,14 @@
+
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
 const Gallery = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1500
+    }); 
+  }, [])
   return (
     <div className="my-20 md:max-w-6xl mx-auto px-20 md:px-0" id="gallery">
       <div className="grid justify-center">
@@ -12,7 +22,7 @@ const Gallery = () => {
         />
       </div>
       <div className="grid md:grid-cols-3 gap-5 ">
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img src="https://i.ibb.co/RTDpqzb/gallery-1.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -22,7 +32,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img src="https://i.ibb.co/0DBV40g/gallery-2.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -32,7 +42,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img src="https://i.ibb.co/NC53v2t/gallery-3.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -44,7 +54,7 @@ const Gallery = () => {
         </div>
       </div>
       <div className="grid md:grid-cols-4 gap-5 mt-5">
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img className="md:h-[300px]" src="https://i.ibb.co/HtRtwwz/gallery-4.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -54,7 +64,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="hero col-span-2">
+        <div className="hero col-span-2" data-aos="fade-left">
           <img className="md:h-[300px]" src="https://i.ibb.co/F3cKKSp/gallery-5.jpg"
             alt=""
           />
@@ -66,7 +76,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img className="md:h-[300px]" src="https://i.ibb.co/5hJ3G1p/gallery01-06.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -78,7 +88,7 @@ const Gallery = () => {
         </div>
       </div>
       <div className="grid md:grid-cols-3 gap-5 mt-5">
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img src="https://i.ibb.co/BKhdp6M/gallery-8.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -88,7 +98,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img src="https://i.ibb.co/qYF22Vf/gallery-7.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">
@@ -98,7 +108,7 @@ const Gallery = () => {
             </div>
           </div>
         </div>
-        <div className="hero">
+        <div className="hero" data-aos="fade-left">
           <img src="https://i.ibb.co/h1tN8q6/gallery-9.jpg" alt="" />
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center text-neutral-content">

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Schedules = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -12,7 +15,11 @@ const Schedules = () => {
   const handleSubmit = () => {
     toast("You have successfully reserved your seats");
   };
-
+  useEffect(() => {
+    Aos.init({
+      duration: 1500
+    }); 
+  }, [])
   return (
     <div className="mb-10 px-5 md:px-0" id="schedules">
       <div className="grid justify-center">
@@ -54,7 +61,7 @@ const Schedules = () => {
       <div className="tab-content mt-20">
         {activeTab === 0 && (
           <div className="space-y-5">
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600">8.00 AM</p>
               <img
                 className="w-28 rounded-md mx-5"
@@ -68,7 +75,7 @@ const Schedules = () => {
                 Morning
               </h4>
             </div>
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600">1.30 PM</p>
               <img
                 className="w-28 rounded-md mx-7"
@@ -82,7 +89,7 @@ const Schedules = () => {
                 Afternoon
               </h4>
             </div>
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600 max-w-20">
                 7.30 PM
               </p>
@@ -102,7 +109,7 @@ const Schedules = () => {
         )}
         {activeTab === 1 && (
           <div className="space-y-5">
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600">9.00 AM</p>
               <img
                 className="w-28 rounded-md mx-5"
@@ -116,7 +123,7 @@ const Schedules = () => {
                 Morning
               </h4>
             </div>
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600">12.30 PM</p>
               <img
                 className="w-28 rounded-md mx-7"
@@ -130,7 +137,7 @@ const Schedules = () => {
                 Afternoon
               </h4>
             </div>
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600 max-w-20">
                 8.30 PM
               </p>
@@ -150,7 +157,7 @@ const Schedules = () => {
         )}
         {activeTab === 2 && (
           <div className="space-y-5">
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600">8.00 AM</p>
               <img
                 className="w-28 rounded-md mx-5"
@@ -164,7 +171,7 @@ const Schedules = () => {
                 Morning
               </h4>
             </div>
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600">1.30 PM</p>
               <img
                 className="w-28 rounded-md mx-7"
@@ -178,7 +185,7 @@ const Schedules = () => {
                 Afternoon
               </h4>
             </div>
-            <div className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
+            <div data-aos="fade-right" className="navbar w-full flex items-center border-2 rounded-md border-purple-300 md:max-w-5xl mx-auto px-10 py-5">
               <p className="text-xl font-semibold text-teal-600 max-w-20">
                 7.30 PM
               </p>

@@ -1,11 +1,20 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 const Card = ({ card }) => {
-  const { id, name, image, short_description, price } = card;
+  const { id, name, image, short_description, price } = card;  
+  
+  useEffect(() => {
+    Aos.init({
+      duration: 1500
+    }); 
+  }, [])
   return (
     <div className="card card-compact">
       <Link to={`/card/${id}`}>
-        <div>
+        <div data-aos="fade-right">
           <figure>
             <img className="mb-1 rounded-lg" src={image} alt="" />
           </figure>

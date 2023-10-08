@@ -1,10 +1,20 @@
+
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
 const EventsAndParties = () => {
+    useEffect(() => {
+    Aos.init({
+      duration: 1500
+    }); 
+  }, [])
   return (
     <div className="my-10 px-10 lg:pl-32 mx-auto">
       <h3 className="text-center text-5xl md:text-6xl font-bold mb-10">
         Events + Parties
       </h3>
-      <div className="flex justify-center flex-col relative mb-80 md:mb-40 lg:mb-0">
+      <div className="flex justify-center flex-col relative mb-80 md:mb-40 lg:mb-0" data-aos="fade-right">
         <div className="">
           <img
             src="https://i.ibb.co/WFbLjGr/corporate-event.jpg"
@@ -31,7 +41,7 @@ const EventsAndParties = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col relative lg:mt-20  mb-80 md:mb-40 lg:mb-0">
+      <div className="flex justify-center flex-col relative lg:mt-20  mb-80 md:mb-40 lg:mb-0" data-aos="fade-left">
         <div className="lg:w-[60%]">
           <img
             src="https://i.ibb.co/518qxN4/birthday-event.jpg"
@@ -57,7 +67,7 @@ const EventsAndParties = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-col relative lg:mt-20 mb-80 md:mb-40 lg:mb-0">
+      <div className="flex justify-center flex-col relative lg:mt-20 mb-80 md:mb-40 lg:mb-0" data-aos="fade-right">
         <div className="lg:w-[60%]">
           <img
             src="https://i.ibb.co/PCFHFCY/bachelorette.jpg"

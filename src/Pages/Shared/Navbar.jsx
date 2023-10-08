@@ -33,7 +33,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 md:max-w-4xl lg:max-w-6xl md:mx-auto flex-col-reverse md:flex-row">
+    <div className="navbar bg-base-100 md:max-w-4xl lg:max-w-7xl md:mx-auto flex-col-reverse md:flex-row">
       <div className="navbar-start justify-center md:justify-start">
       <NavLink to='/' className='text-xl md:text-3xl font-semibold text-teal-600'>Social Events</NavLink>
         <div className="dropdown">
@@ -55,7 +55,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box"
           >
             {navLinks}
           </ul>
@@ -64,12 +64,10 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-teal-600 font-medium ">{navLinks}</ul>
       </div>
-      <div className="navbar-end justify-center md:justify-start">
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-        </label>
+      <div className="navbar-end justify-center md:justify-start lg:justify-end">
         {user ? <>
             <img src={user.photoURL} className="w-7 mr-2 rounded-full" alt="" />
-            <a className="text-teal-600 font-medium">{user.email}</a>
+            <a className="text-sm text-teal-600 font-medium">{user.email}</a>
             <button onClick={handleSignOut} className="btn ml-2 text-teal-600 hover:bg-teal-600 hover:text-white">
             Sign Out
           </button>
