@@ -14,6 +14,16 @@ const Navbar = () => {
       <li>
         <NavLink to="/" className='hover:bg-teal-600 hover:text-white'>Home</NavLink>
       </li>
+      {
+        user && <>
+          <li>
+          <NavLink to="/news" className='hover:bg-teal-600 hover:text-white'>News</NavLink>
+          </li>
+          <li>
+          <NavLink to="/eventsandparties" className='hover:bg-teal-600 hover:text-white'>Events + Parties</NavLink>
+          </li>
+        </>
+      }
       <li>
         <NavLink to="/login" className='hover:bg-teal-600 hover:text-white'>Login</NavLink>
       </li>

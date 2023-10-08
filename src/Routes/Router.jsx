@@ -6,6 +6,8 @@ import PrivateRoute from "./PrivateRoute";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import News from "../Pages/News/News";
+import EventsAndParties from "../Pages/EventsAndParties/EventsAndParties";
 
 const router = createBrowserRouter([
   {
@@ -35,8 +37,12 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/register",
-        element: <Register></Register>,
+        path: "/news",
+        element: <PrivateRoute><News></News></PrivateRoute>
+      },
+      {
+        path: "/eventsandparties",
+        element: <PrivateRoute><EventsAndParties></EventsAndParties></PrivateRoute>
       },
     ],
   },

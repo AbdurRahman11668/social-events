@@ -1,6 +1,6 @@
 const Gallery = () => {
   return (
-    <div className="my-20 max-w-6xl mx-auto" id="gallery">
+    <div className="my-20 md:max-w-6xl mx-auto px-20 md:px-0" id="gallery">
       <div className="grid justify-center">
         <h3 className="text-4xl md:text-5xl text-center font-bold text-teal-700 mb-10">
           Gallery

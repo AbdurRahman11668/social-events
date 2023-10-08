@@ -14,7 +14,7 @@ const Schedules = () => {
   };
 
   return (
-    <div className="mb-10" id="schedules">
+    <div className="mb-10 px-5 md:px-0" id="schedules">
       <div className="grid justify-center">
         <h3 className="text-4xl md:text-5xl text-center font-bold text-teal-700 mb-10">
           Schedules
