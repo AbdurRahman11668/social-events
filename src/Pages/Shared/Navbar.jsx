@@ -15,9 +15,6 @@ const Navbar = () => {
         <NavLink to="/" className='hover:bg-teal-600 hover:text-white'>Home</NavLink>
       </li>
       <li>
-        <NavLink to="/timeline" className='hover:bg-teal-600 hover:text-white'>Timeline</NavLink>
-      </li>
-      <li>
         <NavLink to="/login" className='hover:bg-teal-600 hover:text-white'>Login</NavLink>
       </li>
       <li>
@@ -26,9 +23,9 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 max-w-6xl mx-auto">
-      <div className="navbar-start">
-      <NavLink to='/' className='text-3xl font-semibold text-teal-600'>Social Events</NavLink>
+    <div className="navbar bg-base-100 md:max-w-4xl lg:max-w-6xl md:mx-auto flex-col-reverse md:flex-row">
+      <div className="navbar-start justify-center md:justify-start">
+      <NavLink to='/' className='text-xl md:text-3xl font-semibold text-teal-600'>Social Events</NavLink>
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
@@ -57,13 +54,13 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 text-teal-600 font-medium ">{navLinks}</ul>
       </div>
-      <div className="navbar-end">
+      <div className="navbar-end justify-center md:justify-start">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         </label>
         {user ? <>
             <img src={user.photoURL} className="w-7 mr-2 rounded-full" alt="" />
-            <a>{user.email}</a>
-            <button onClick={handleSignOut} className="btn ml-2">
+            <a className="text-teal-600 font-medium">{user.email}</a>
+            <button onClick={handleSignOut} className="btn ml-2 text-teal-600 hover:bg-teal-600 hover:text-white">
             Sign Out
           </button>
         </> : (

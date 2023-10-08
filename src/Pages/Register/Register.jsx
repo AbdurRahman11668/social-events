@@ -51,6 +51,7 @@ const Register = () => {
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
+        toast("Your registration successfully completed!");
       })
       .catch((error) => {
         console.error(error);

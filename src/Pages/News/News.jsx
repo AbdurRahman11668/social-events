@@ -1,5 +1,5 @@
 
-const TimeLine = () => {
+const News = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const TimeLine = () => {
     );
 };
 
-export default TimeLine;
+export default News;
