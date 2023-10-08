@@ -1,6 +1,6 @@
 SOCIAL EVENTS
 
-Live Link: https://social-events-71be0.web.app/eventsandparties
+Live Link: https://social-events-71be0.web.app/
 
 Features and Functionalities:
 1. User registration and login functionality.
